@@ -12,7 +12,7 @@ namespace DAL.Entites
         public int PlaceId { get; set; }
         public PlaceEntity Place { get; set; }
 
-        public int UserId { get; set; }
-        public UserEntity User { get; set; }
+        //public int UserId { get; set; }
+        //public UserEntity User { get; set; }
     }
 }
