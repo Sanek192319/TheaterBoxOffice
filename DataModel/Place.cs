@@ -11,5 +11,7 @@ namespace DataModel
         public T Id { get; set; }
         public float price  { get; set; }
         public T HallId     { get; set; }
+
+        public int PlaceNumber { get; set; }
     }
 }

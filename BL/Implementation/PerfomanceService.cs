@@ -25,19 +25,36 @@ namespace BL.Implementation
             return result;
         }
 
-        public IEnumerable<Perfomance<int>> GetPerfomanceByDate(string PerfomanceDate)
+        public IEnumerable<Perfomance<int>> GetPerfomanceByDate(DateTime PerfomanceDate)
         {
-            throw new NotImplementedException();
+            var result = _unitOfWork
+               .PerfomanceRepository
+               .GetPerfomanceByDate(PerfomanceDate).Select(perfomance => perfomance.ToModelEntity()).ToList();
+            return result;
         }
 
         public IEnumerable<Perfomance<int>> GetPerfomanceByGenre(string GenreName)
         {
-            throw new NotImplementedException();
+            var result = _unitOfWork
+                .PerfomanceRepository
+                .GetPerfomanceByGenre(GenreName).Select(perfomance => perfomance.ToModelEntity()).ToList();
+            return result;
+        }
+
+        public Perfomance<int> GetPerfomanceById(int id)
+        {
+            var result = _unitOfWork
+                .PerfomanceRepository
+                .GetById(id).ToModelEntity();
+            return result;
         }
 
         public IEnumerable<Perfomance<int>> GetPerfomanceByName(string PerfomanceName)
         {
-            throw new NotImplementedException();
+            var result = _unitOfWork
+                .PerfomanceRepository
+                .GetPerfomanceByName(PerfomanceName).Select(perfomance => perfomance.ToModelEntity()).ToList();
+            return result;
         }
     }
 }

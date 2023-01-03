@@ -15,7 +15,6 @@ namespace DAL.UnitOfWork.Abstraction
         public IPerfomanceRepository PerfomanceRepository { get; set; }
         public IPlaceRepository PlaceRepository { get; set; }
         public ITicketRepository TicketRepository { get; set; }
-        public IUserRepository UserRepository { get; set; }
         public void Save();
     }
 }

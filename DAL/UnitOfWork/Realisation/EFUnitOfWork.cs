@@ -13,7 +13,7 @@ namespace DAL.UnitOfWork.Realisation
         private TheaterBoxOfficeDbContext _dbContext;
 
         public EFUnitOfWork(TheaterBoxOfficeDbContext dbContext, IBookingRepository bookingRepository, IGenreRepository genreRepository,
-            IHallRepository hallRepository, IPerfomanceRepository perfomanceRepository, IPlaceRepository placeRepository, ITicketRepository ticketRepository, IUserRepository userRepository)
+            IHallRepository hallRepository, IPerfomanceRepository perfomanceRepository, IPlaceRepository placeRepository, ITicketRepository ticketRepository)
         {
             _dbContext = dbContext;
             BookingRepository = bookingRepository;
@@ -22,7 +22,6 @@ namespace DAL.UnitOfWork.Realisation
             PerfomanceRepository = perfomanceRepository;
             PlaceRepository = placeRepository;
             TicketRepository = ticketRepository;
-            UserRepository = userRepository;
         }
 
         public IBookingRepository BookingRepository { get; set; }
@@ -31,7 +30,6 @@ namespace DAL.UnitOfWork.Realisation
         public IPerfomanceRepository PerfomanceRepository { get; set; }
         public IPlaceRepository PlaceRepository { get; set; }
         public ITicketRepository TicketRepository { get; set; }
-        public IUserRepository UserRepository { get; set; }
 
         ~EFUnitOfWork()
         {

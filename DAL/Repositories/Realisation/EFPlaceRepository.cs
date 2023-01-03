@@ -15,5 +15,12 @@ namespace DAL.Repositories.Realisation
 
         }
 
+        public IEnumerable<PlaceEntity> GetNotBusyPlaces(IEnumerable<int> BusyPlasesId, int HallId)
+        {
+
+            var result = _dbContext.Set<PlaceEntity>()
+                 .Where(x => !BusyPlasesId.Contains(x.Id) && x.HallId == HallId).ToList();
+            return result;
+        }
     }
 }

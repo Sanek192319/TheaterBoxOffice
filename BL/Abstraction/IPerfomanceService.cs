@@ -13,6 +13,8 @@ namespace BL.Abstraction
         public IEnumerable<Perfomance<T>> GetPerfomanceByName(string PerfomanceName);
         public IEnumerable<Perfomance<T>> GetPerfomanceByGenre(string GenreName);
 
-        public IEnumerable<Perfomance<T>> GetPerfomanceByDate(string PerfomanceDate);
+        public IEnumerable<Perfomance<T>> GetPerfomanceByDate(DateTime PerfomanceDate);
+
+        public Perfomance<T> GetPerfomanceById(T id);
     }
 }

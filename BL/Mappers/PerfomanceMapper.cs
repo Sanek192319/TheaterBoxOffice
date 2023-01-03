@@ -12,30 +12,32 @@ namespace BL.Mappers
     {
         public static Perfomance<int> ToModelEntity(this PerfomanceEntity perfomanceDBEntity)
         {
-            var dishTypeModelEntity = new Perfomance<int>()
+            var PerfomanceModelEntity = new Perfomance<int>()
             {
                 Id = perfomanceDBEntity.Id,
                 AuthurName = perfomanceDBEntity.AuthurName,
                 HallId = perfomanceDBEntity.HallId,
                 PerfomanceName = perfomanceDBEntity.PerfomanceName,
-                GenreId = perfomanceDBEntity.GenreId
+                GenreId = perfomanceDBEntity.GenreId,
+                PerfomanceDate = perfomanceDBEntity.PerfomanceDate
             };
 
-            return dishTypeModelEntity;
+            return PerfomanceModelEntity;
         }
 
-        public static PerfomanceEntity ToDbntity(this Perfomance<int> dishTypeModelEntity)
+        public static PerfomanceEntity ToDbntity(this Perfomance<int> PerfomanceModelEntity)
         {
-            var basketDbEntity = new PerfomanceEntity()
+            var PerfomanceDBEntity = new PerfomanceEntity()
             {
-                Id = dishTypeModelEntity.Id,
-                AuthurName = dishTypeModelEntity.AuthurName,
-                HallId = dishTypeModelEntity.HallId,
-                PerfomanceName = dishTypeModelEntity.PerfomanceName,
-                GenreId = dishTypeModelEntity.GenreId
+                Id = PerfomanceModelEntity.Id,
+                AuthurName = PerfomanceModelEntity.AuthurName,
+                HallId = PerfomanceModelEntity.HallId,
+                PerfomanceName = PerfomanceModelEntity.PerfomanceName,
+                GenreId = PerfomanceModelEntity.GenreId,
+                PerfomanceDate = PerfomanceModelEntity.PerfomanceDate
             };
 
-            return basketDbEntity;
+            return PerfomanceDBEntity;
         }
     }
 }

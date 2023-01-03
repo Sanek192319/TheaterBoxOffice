@@ -27,7 +27,6 @@ namespace DAL
         public virtual DbSet<PerfomanceEntity> Perfomances { get; set; }
         public virtual DbSet<PlaceEntity> Places { get; set; }
         public virtual DbSet<TicketEntity> Tickets { get; set; }
-        public virtual DbSet<UserEntity> Users { get; set; }
 
         #endregion members
     }

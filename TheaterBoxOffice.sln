@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheaterBoxOffice", "TheaterBoxOffice\TheaterBoxOffice.csproj", "{80328712-7A0E-4A3F-BEE3-526435C0DEB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheaterBoxOffice", "TheaterBoxOffice\TheaterBoxOffice.csproj", "{80328712-7A0E-4A3F-BEE3-526435C0DEB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{4A1399EB-DA79-4272-8453-7E294D488050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{4A1399EB-DA79-4272-8453-7E294D488050}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{C38DCA2D-AA41-4050-8B4D-51899331D50E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL", "BL\BL.csproj", "{C38DCA2D-AA41-4050-8B4D-51899331D50E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{B923408F-5210-44A1-9080-BD4E17E33215}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataModel", "DataModel\DataModel.csproj", "{B923408F-5210-44A1-9080-BD4E17E33215}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheaterBoxOffice.WebMVC", "TheaterBoxOffice.WebMVC\TheaterBoxOffice.WebMVC.csproj", "{B28FBAAB-8469-4F64-9474-C9D8630B230C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B923408F-5210-44A1-9080-BD4E17E33215}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B923408F-5210-44A1-9080-BD4E17E33215}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B923408F-5210-44A1-9080-BD4E17E33215}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28FBAAB-8469-4F64-9474-C9D8630B230C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28FBAAB-8469-4F64-9474-C9D8630B230C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28FBAAB-8469-4F64-9474-C9D8630B230C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28FBAAB-8469-4F64-9474-C9D8630B230C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

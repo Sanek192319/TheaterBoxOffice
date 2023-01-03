@@ -1,0 +1,56 @@
+﻿@using TheaterBoxOffice.WebMVC.ReturnModels
+@model IEnumerable<ReturnModelForTickets<int>>
+@{
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+    <title>All Places</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="/">back</a>
+    </div>
+    <table>
+        <tr>
+            <th>Place Number</th>
+            <th>Price</th>
+            <th>Buy Ticket</th>
+            <th>Book Ticket</th>
+        </tr>
+        @foreach (var place in Model)
+        {
+            <tr>
+                <td>@place.PlaceNumber</td>
+                <td>@place.Price</td>
+                 <td><a href="/Tickets/SellTicket?id=@place.Id&perfomanceId=@place.PerfomanceId&hallid=@place.HallId">buy ticket</a></td>
+                 <td><a href="/Tickets/BookTickets?id=@place.Id&perfomanceId=@place.PerfomanceId&hallid=@place.HallId">book ticket</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

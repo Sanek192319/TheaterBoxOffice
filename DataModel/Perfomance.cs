@@ -14,5 +14,7 @@ namespace DataModel
         public T HallId { get; set; }
         public string PerfomanceName { get; set; }
         public T GenreId    { get; set; }
+
+        public DateTime PerfomanceDate { get; set; }
     }
 }

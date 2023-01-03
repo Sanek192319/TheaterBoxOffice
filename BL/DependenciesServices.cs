@@ -13,7 +13,11 @@ namespace BL
     {
         public static IServiceCollection SetServices(this IServiceCollection services)
         {
+            services.AddScoped<IHallService<int>, HallService>();
             services.AddScoped<IPerfomanceService<int>, PerfomanceService>();
+            services.AddScoped<ITicketService<int>, TicketService>();
+            services.AddScoped<IBookingService<int>, BookingService>();
+            services.AddScoped<IPlaceService<int>, PlaceService>();
             return services;
         }
     }

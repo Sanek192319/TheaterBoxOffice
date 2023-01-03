@@ -8,7 +8,9 @@ namespace DAL.Entites
 {
     public class BookingEntity : BaseEntity<int>
     {
-        public int TicketId { get; set; }
-        public TicketEntity Ticket { get; set; }
+        public int PerfomanceId { get; set; }
+        public int PlaceId { get; set; }
+        public PlaceEntity Place { get; set; }
+
     }
 }

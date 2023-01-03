@@ -11,5 +11,7 @@ namespace DAL.Entites
         public float Price { get; set; }
         public int HallId { get; set; }
         public HallEntity Hall { get; set; }
+
+        public int PlaceNumber { get; set; }
     }
 }

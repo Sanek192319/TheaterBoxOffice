@@ -14,5 +14,8 @@ namespace DAL.Entites
         public string PerfomanceName { get; set; }
         public int HallId { get; set; }
         public HallEntity Hall { get; set; }
+
+        public DateTime PerfomanceDate { get; set; }
+        
     }
 }

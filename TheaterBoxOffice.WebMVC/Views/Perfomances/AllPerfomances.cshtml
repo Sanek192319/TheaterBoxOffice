@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DataModel.Perfomance<int>>
+@{
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+    <title>All dish types</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="/">back</a>
+    </div>
+    <table>
+        <tr>
+            <th>Author Name</th>
+            <th>Perfomance Name</th>
+            <th>Perfomance Date</th> 
+            <th>Hall</th>
+            <th>Places</th>
+        </tr>
+        @foreach (var perfomance in Model)
+        {
+            <tr>
+                <td>@perfomance.AuthurName</td>
+                <td>@perfomance.PerfomanceName</td>
+                <td>@perfomance.PerfomanceDate</td>
+                <td>@perfomance.HallId</td>
+                <td><a href="/Places/Showplaces?id=@perfomance.Id&hallId=@perfomance.HallId">show places</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

@@ -16,7 +16,6 @@ namespace DAL
             services.AddScoped<IHallRepository,EFHallRepository>();
             services.AddScoped<IPlaceRepository,EFPlaceRepository>();
             services.AddScoped<ITicketRepository,EFTicketRepository>();
-            services.AddScoped<IUserRepository,EFUserRepository>();
             services.AddScoped<IUnitOfWork, EFUnitOfWork>();
             return services;
         }
